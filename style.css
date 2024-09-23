@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Consolas, monaco, monospace;
+    font-size: 17px;
+    font-weight: 400;
+    //font-family: 'Andale Mono';
+    line-height: 1.6;
+    color: #333;
+}
+
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative; /* Para posicionar el pseudo-elemento correctamente */
+    z-index: 1;
+    background-color: #f4f4f4;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('back.png');
+    background-size: cover;
+    background-position: center;
+   filter: blur(2.5px); /* Ajusta el valor de blur según lo necesites */
+    z-index: -1; /* Asegúrate de que el pseudo-elemento quede detrás del contenido */
+
+}
+
+.container {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8; /* Opcional: ajusta la opacidad del fondo */
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #0957A2;
+}
+h2 {
+    color: #0957A2;
+    border-bottom: 2px solid #0957A2;
+    padding-bottom: 15px;
+    margin-top: 15px;
+}
+.contact-info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.contact-info p {
+    margin: 5px 0;
+}
